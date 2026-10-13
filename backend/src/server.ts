@@ -17,7 +17,7 @@ import authRoutes from "./routes/auth.routes";
 
 const app = express();
 
-const PORT = Number(process.env.PORT) || 5000;
+const PORT = Number(process.env.PORT) || 5001;
 
 if (!process.env.JWT_SECRET) {
   throw new Error("JWT_SECRET is missing");
@@ -27,7 +27,7 @@ app.use(
   cors({
     origin:
       process.env.CLIENT_URL ||
-      "http://localhost:5173",
+      "http://localhost:5174",
   })
 );
 
